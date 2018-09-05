@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>  
+		<title>ITK</title>	
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="css/ol.css" media="all" type="text/css" rel="stylesheet">
+		<link href="css/main.css" media="all" type="text/css" rel="stylesheet">
+		<script src="js/ol-debug.js" defer="defer"></script>
+		<script src="js/main.js" defer="defer"></script>
+		<script src="js/jquery-2.1.1.min.js" ></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.4.3/proj4.js"></script>
+	</head>
+	<body>
+		<h1> WEB KARTOGRAFIJA-JOVO MARJANOVIĆ </h1>
+		
+		<div id="map" class="map"></div>
+		<div id="popup" class="ol-popup">
+			<a href="#" id="popup-closer" class="ol-popup-closer"></a>
+		<div id="popup-content"></div>
+		</div>
+		<nav id="layers">Podloge:	
+			<ul>
+				<li><input type="radio" name = "radio" value="osm" checked> OpenStreetMap </li>
+				<li><input type="radio" name = "radio" value="bing"> Bing Maps</li>
+			
+			</ul>
+		</nav>
+
+
+		<div id="projections">
+			<div class="col-sm-12">
+					<input type="radio" name="projekcija" value="lamb">Lambertova
+			</div>
+			<div class="col-sm-12">
+				  <input type="radio" name="projekcija" value="merc" >Mercator
+			</div>
+			<div class="col-sm-12">
+				  <input type="radio" name="projekcija" value="dks" checked>DKS
+			</div>
+			<div class="col-sm-12">
+				  <input type="radio" name="projekcija" value="utm" checked>UTM
+			</div>
+		</div>
+		<div id="map" class="map"></div>
+    <form class="form-inline">
+      <label>Tip geometrije &nbsp;</label>
+      <select id="type">
+        <option value="Point">Kreiraj tačku</option>
+        <option value="LineString">Kreiraj liniju</option>
+        <option value="Polygon">Kreiraj poligon</option>
+        <option value="None">None</option>
+      </select>
+    </form>
+	
+	
+		
+   
+
+	</body>
+</html>
